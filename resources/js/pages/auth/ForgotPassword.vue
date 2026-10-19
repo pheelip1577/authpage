@@ -28,10 +28,19 @@ defineProps<{
             {{ status }}
         </div>
 
-        <Form v-bind="email.form()" v-slot="{ errors, processing }" class="flex flex-col gap-4">
+        <Form
+            v-bind="email.form()"
+            v-slot="{ errors, processing }"
+            class="flex flex-col gap-4"
+        >
             <div>
-                <div class="flex items-center rounded-md border border-[#3c4964] bg-[#1a2233] px-3 py-2.5 transition-colors focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500">
-                    <label for="email" class="mr-2.5 flex w-5 items-center justify-center font-medium text-slate-300 select-none">
+                <div
+                    class="flex items-center rounded-md border border-[#3c4964] bg-[#1a2233] px-3 py-2.5 transition-colors focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500"
+                >
+                    <label
+                        for="email"
+                        class="mr-2.5 flex w-5 items-center justify-center font-medium text-slate-300 select-none"
+                    >
                         <span>@</span>
                     </label>
                     <input
@@ -42,10 +51,13 @@ defineProps<{
                         required
                         v-focus
                         placeholder="Email"
-                        class="w-full border-0 bg-transparent p-0 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:ring-0"
+                        class="w-full border-0 bg-transparent p-0 text-sm text-white placeholder:text-slate-400 focus:ring-0 focus:outline-none"
                     />
                 </div>
-                <InputError :message="errors.email" class="mt-1 text-xs text-rose-400" />
+                <InputError
+                    :message="errors.email"
+                    class="mt-1 text-xs text-rose-400"
+                />
             </div>
 
             <button

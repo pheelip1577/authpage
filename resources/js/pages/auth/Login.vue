@@ -46,9 +46,18 @@ const showPassword = ref(false);
             <div class="flex flex-col gap-4">
                 <!-- Email -->
                 <div>
-                    <div class="flex items-center rounded-md border border-[#3c4964] bg-[#1a2233] px-3 py-2.5 transition-colors focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500">
-                        <label for="email" class="mr-2.5 flex cursor-pointer items-center select-none">
-                            <img src="/images/person_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Email" class="h-5 w-5 opacity-80" />
+                    <div
+                        class="flex items-center rounded-md border border-[#3c4964] bg-[#1a2233] px-3 py-2.5 transition-colors focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500"
+                    >
+                        <label
+                            for="email"
+                            class="mr-2.5 flex cursor-pointer items-center select-none"
+                        >
+                            <img
+                                src="/images/person_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                                alt="Email"
+                                class="h-5 w-5 opacity-80"
+                            />
                         </label>
                         <input
                             id="email"
@@ -59,17 +68,29 @@ const showPassword = ref(false);
                             :tabindex="1"
                             autocomplete="email"
                             placeholder="Email"
-                            class="w-full border-0 bg-transparent p-0 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:ring-0"
+                            class="w-full border-0 bg-transparent p-0 text-sm text-white placeholder:text-slate-400 focus:ring-0 focus:outline-none"
                         />
                     </div>
-                    <InputError :message="errors.email" class="mt-1 text-xs text-rose-400" />
+                    <InputError
+                        :message="errors.email"
+                        class="mt-1 text-xs text-rose-400"
+                    />
                 </div>
 
                 <!-- Password -->
                 <div>
-                    <div class="flex items-center rounded-md border border-[#3c4964] bg-[#1a2233] px-3 py-2.5 transition-colors focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500">
-                        <label for="password" class="mr-2.5 flex cursor-pointer items-center select-none">
-                            <img src="/images/lock_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Password" class="h-5 w-5 opacity-80" />
+                    <div
+                        class="flex items-center rounded-md border border-[#3c4964] bg-[#1a2233] px-3 py-2.5 transition-colors focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500"
+                    >
+                        <label
+                            for="password"
+                            class="mr-2.5 flex cursor-pointer items-center select-none"
+                        >
+                            <img
+                                src="/images/lock_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                                alt="Password"
+                                class="h-5 w-5 opacity-80"
+                            />
                         </label>
                         <input
                             id="password"
@@ -79,25 +100,35 @@ const showPassword = ref(false);
                             :tabindex="2"
                             autocomplete="current-password"
                             placeholder="Password"
-                            class="w-full border-0 bg-transparent p-0 text-sm text-white placeholder:text-slate-400 focus:outline-none focus:ring-0"
+                            class="w-full border-0 bg-transparent p-0 text-sm text-white placeholder:text-slate-400 focus:ring-0 focus:outline-none"
                         />
                         <button
                             type="button"
                             @click="showPassword = !showPassword"
                             class="ml-2 cursor-pointer text-slate-400 transition-colors hover:text-white"
                             tabindex="-1"
-                            :aria-label="showPassword ? 'Hide password' : 'Show password'"
+                            :aria-label="
+                                showPassword ? 'Hide password' : 'Show password'
+                            "
                         >
                             <EyeOff v-if="showPassword" class="size-4" />
                             <Eye v-else class="size-4" />
                         </button>
                     </div>
-                    <InputError :message="errors.password" class="mt-1 text-xs text-rose-400" />
+                    <InputError
+                        :message="errors.password"
+                        class="mt-1 text-xs text-rose-400"
+                    />
                 </div>
 
                 <!-- Remember me & Forgot Password -->
-                <div class="flex items-center justify-between text-xs text-slate-300">
-                    <label for="remember" class="flex cursor-pointer items-center gap-2 select-none">
+                <div
+                    class="flex items-center justify-between text-xs text-slate-300"
+                >
+                    <label
+                        for="remember"
+                        class="flex cursor-pointer items-center gap-2 select-none"
+                    >
                         <input
                             id="remember"
                             type="checkbox"

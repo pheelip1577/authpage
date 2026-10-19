@@ -12,13 +12,18 @@ const { title = '', description = '' } = defineProps<{
 <template>
     <div
         class="relative flex min-h-screen w-full items-center justify-center bg-cover bg-center bg-no-repeat p-4 sm:p-6"
-        style="background-image: url('/images/pexels-codioful-7130481.jpg'); font-family: 'Poppins', sans-serif;"
+        style="
+            background-image: url('/images/pexels-codioful-7130481.jpg');
+            font-family: 'Poppins', sans-serif;
+        "
     >
         <!-- Background dark tint for readability -->
         <div class="absolute inset-0 bg-slate-950/40 backdrop-blur-[2px]"></div>
 
         <!-- Auth Card Container -->
-        <div class="relative z-10 w-full max-w-[380px] rounded-xl border border-[#3c4964]/70 bg-[#252e42] p-7 text-white shadow-2xl">
+        <div
+            class="relative z-10 w-full max-w-[380px] rounded-xl border border-[#3c4964]/70 bg-[#252e42] p-7 text-white shadow-2xl"
+        >
             <div class="mb-6 flex flex-col items-center">
                 <Link
                     :href="home()"
@@ -27,10 +32,16 @@ const { title = '', description = '' } = defineProps<{
                 >
                     <AppLogoIcon class="size-6 fill-current text-white" />
                 </Link>
-                <h1 v-if="title" class="text-2xl font-semibold tracking-tight text-white text-center">
+                <h1
+                    v-if="title"
+                    class="text-center text-2xl font-semibold tracking-tight text-white"
+                >
                     {{ title }}
                 </h1>
-                <p v-if="description" class="mt-1 text-center text-xs text-slate-300">
+                <p
+                    v-if="description"
+                    class="mt-1 text-center text-xs text-slate-300"
+                >
                     {{ description }}
                 </p>
             </div>
@@ -39,4 +50,3 @@ const { title = '', description = '' } = defineProps<{
         </div>
     </div>
 </template>
-
