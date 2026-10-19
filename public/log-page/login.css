@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #252e42;
+    --secondary-color: #ffffff;
+    --accent-color: #2563eb;
+    --text-color: #ffffff;
+    --bg-color: #0f172a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('pexels-codioful-7130481.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: var(--primary-color);
+    width: 360px;
+    padding: 30px 25px;
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.input-group,
+form > div {
+    display: flex;
+    align-items: center;
+    background-color: #1a2233;
+    border: 1px solid #3c4964;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 10px 12px;
+}
+
+.input-group label,
+form > div label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.input-group label img,
+form > div label img {
+    width: 20px;
+    height: 20px;
+}
+
+.form-control {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-login:hover {
+    background-color: #1d4ed8;
+}
+
+p {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+p a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
